@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectRepository>
+  <DashboardPage>
+    <!--Forms & form permissions information-->
+    <DashboardText>//div[@id='dashfull']/h3</DashboardText>
+  </DashboardPage>
+</ObjectRepository>

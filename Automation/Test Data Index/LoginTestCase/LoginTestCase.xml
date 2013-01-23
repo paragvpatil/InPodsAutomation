@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestData>
+  <TestCaseLogin>
+    <!--Forms & form permissions information-->
+    <ResourceType>Virtual Machine</ResourceType>
+    <Provider>Arsys</Provider>
+    <ResourceDescription>Arsys Large Machine with Windows Server 2008 R2 SP1 Web with SQL Server 2008 Web and Plesk 10 (unlimited domains) 64 Bit</ResourceDescription>
+  </TestCaseLogin>
+</TestData>

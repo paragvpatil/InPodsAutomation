@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectRepository>
+  <LoginPage>
+    <!--Forms & form permissions information-->
+    <UserNameTextbox>//input[@id='email']</UserNameTextbox>
+    <PasswordTextbox>//input[@id='pass']</PasswordTextbox>
+    <LoginButton>//button[@id='send2']</LoginButton>
+    <MarketPlaceTab>//div[@class='firstpart-menu']/a</MarketPlaceTab>
+  </LoginPage>
+</ObjectRepository>

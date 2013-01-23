@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectRepository>
+  <HomePage>
+    <!--Forms & form permissions information-->
+    <AccountDiv>//div[@class='firstpart-account']/div[@class='down-account']</AccountDiv>
+    <LogOutLink>//ul[@class='partaccount-open-ul']/li[6]/a</LogOutLink>
+    <WorkspaceButton>//div[@class='summary']/a/p</WorkspaceButton>
+    <ConfigureButton>//a[@class='customwsbtn']</ConfigureButton>
+  </HomePage>
+</ObjectRepository>

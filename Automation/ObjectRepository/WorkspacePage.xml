@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectRepository>
+  <WorkspacePage>
+    <!--Forms & form permissions information-->
+    <WorkSpaceText>//div[@class='page-title']/h1</WorkSpaceText>
+    <WorkloadTable>//table[@id='WSTable']/tbody/tr</WorkloadTable>
+    <DeleteButton>//html/body/div/div/div[2]/div/div[2]/div/div/div[3]/div[4]/div/a</DeleteButton>
+    <ActivateButton>//html/body/div/div/div[2]/div/div[2]/div/div/div[3]/div[4]/div/a[2]</ActivateButton>
+    <ActivateTrialButton>//a[@id='ActivateTrailPeriod1']</ActivateTrialButton>
+  </WorkspacePage>
+</ObjectRepository>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3970DAFF-DCC7-42AE-BE71-6355E35CBEBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Automation</RootNamespace>
+    <AssemblyName>Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\External Reference\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\External Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\External Reference\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OpenPop">
+      <HintPath>..\External Reference\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\External Reference\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.XML" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\External Reference\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver">
+      <HintPath>..\External Reference\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\External Reference\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Development\Browsers\Browser.cs" />
+    <Compile Include="Development\Browsers\BrowserFactory.cs" />
+    <Compile Include="Development\Browsers\Chrome.cs" />
+    <Compile Include="Development\Browsers\FireFox.cs" />
+    <Compile Include="Development\Browsers\InternetExplorer.cs" />
+    <Compile Include="Development\Pages\HomePage.cs" />
+    <Compile Include="Development\Pages\DashboardPage.cs" />
+    <Compile Include="Development\Pages\LoginPage.cs" />
+    <Compile Include="Development\Pages\SessionHandler.cs" />
+    <Compile Include="Development\Pages\VirtualMachinePage.cs" />
+    <Compile Include="Development\Pages\WorkspacePage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScripts\LogIn.cs" />
+    <Compile Include="Utils\ApplicationLog.cs" />
+    <Compile Include="Utils\AutomationReport.cs" />
+    <Compile Include="Utils\Configuration.cs" />
+    <Compile Include="Utils\FileZipOperations.cs" />
+    <Compile Include="Utils\GraphicalReport.cs" />
+    <Compile Include="TestScripts\Logout.cs" />
+    <Compile Include="Utils\Notifications.cs" />
+    <Compile Include="Utils\ObjectRepository.cs" />
+    <Compile Include="TestScripts\TestCaseUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestScripts\BaseClass.cs" />
+    <Compile Include="Utils\TestData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test Data Index\AutoITScripts\InternetExplorerStopped.au3" />
+    <None Include="Test Data Index\AutoITScripts\QTAgentApplicationErrorHandler.au3" />
+    <None Include="Test Data Index\AutoITScripts\QTAgentHandler.au3" />
+    <None Include="Test Data Index\AutoITScripts\UploadFileScriptError.au3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjectRepository\DashboardPage.xml" />
+    <Content Include="ObjectRepository\HomePage.xml" />
+    <Content Include="ObjectRepository\LoginPage.xml" />
+    <Content Include="ObjectRepository\VirtualMachinePage.xml" />
+    <Content Include="ObjectRepository\WorkspacePage.xml" />
+    <Content Include="Test Data Index\AutoITScripts\InternetExplorerStopped.exe" />
+    <Content Include="Test Data Index\AutoITScripts\QTAgentApplicationErrorHandler.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Data Index\AutoITScripts\QTAgentHandler.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Data Index\AutoITScripts\UploadFileScriptError.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Data Index\Generic Data\Dbgview.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Data Index\Generic Data\TestCasesToExecute.xml" />
+    <Content Include="Test Data Index\Generic Data\ConfigData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Test Data Index\LoginTestCase\LoginTestCase.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
