@@ -111,11 +111,9 @@
     <Compile Include="Development\Browsers\FireFox.cs" />
     <Compile Include="Development\Browsers\InternetExplorer.cs" />
     <Compile Include="Development\Pages\HomePage.cs" />
-    <Compile Include="Development\Pages\DashboardPage.cs" />
-    <Compile Include="Development\Pages\LoginPage.cs" />
-    <Compile Include="Development\Pages\SessionHandler.cs" />
-    <Compile Include="Development\Pages\VirtualMachinePage.cs" />
-    <Compile Include="Development\Pages\WorkspacePage.cs" />
+    <Compile Include="Development\Pages\Common\LoginPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestScripts\LogIn.cs" />
     <Compile Include="Utils\ApplicationLog.cs" />
@@ -141,7 +139,9 @@
   <ItemGroup>
     <Content Include="ObjectRepository\DashboardPage.xml" />
     <Content Include="ObjectRepository\HomePage.xml" />
-    <Content Include="ObjectRepository\LoginPage.xml" />
+    <Content Include="ObjectRepository\LoginPage.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ObjectRepository\VirtualMachinePage.xml" />
     <Content Include="ObjectRepository\WorkspacePage.xml" />
     <Content Include="Test Data Index\AutoITScripts\InternetExplorerStopped.exe" />
@@ -165,7 +165,14 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Development\Pages\Admin\" />
+    <Folder Include="Development\Pages\Parent\" />
+    <Folder Include="Development\Pages\SchoolTech\" />
+    <Folder Include="Development\Pages\Student\" />
+    <Folder Include="Development\Pages\Super\" />
+    <Folder Include="Development\Pages\Teacher\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

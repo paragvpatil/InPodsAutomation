@@ -492,44 +492,44 @@ namespace Automation.Development.Pages
         /// Function to logout user
         /// </summary>
         /// <returns>boolean</returns>
-        public bool LogOut()
-        {
-            // code to logout. Common to all pages.
-            try
-            {
-                LocateControls();
-                IWebElement logoutDiv = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["AccountDiv"]);
-                Actions action = new Actions(this.Browser.Driver);
-                action.MoveToElement(logoutDiv).Perform();
-                this.WaitForElementToGetEnabled("XPATH", (string)objectRepository.ObjectRepositoryTable["LogOutLink"]);
-                IWebElement logOutLinkControl = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["LogOutLink"]);
-                logOutLinkControl.Click();
-                ImplicitlyWait(2000);
-                this.Browser.Driver.Manage().Cookies.DeleteAllCookies();
-                this.Browser.Close();
-                ImplicitlyWait(500);
+        //public bool LogOut()
+        //{
+        //    // code to logout. Common to all pages.
+        //    try
+        //    {
+        //        LocateControls();
+        //        IWebElement logoutDiv = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["AccountDiv"]);
+        //        Actions action = new Actions(this.Browser.Driver);
+        //        action.MoveToElement(logoutDiv).Perform();
+        //        this.WaitForElementToGetEnabled("XPATH", (string)objectRepository.ObjectRepositoryTable["LogOutLink"]);
+        //        IWebElement logOutLinkControl = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["LogOutLink"]);
+        //        logOutLinkControl.Click();
+        //        ImplicitlyWait(2000);
+        //        this.Browser.Driver.Manage().Cookies.DeleteAllCookies();
+        //        this.Browser.Close();
+        //        ImplicitlyWait(500);
 
-                KillAlreadyOpenBrowsers();
-                ImplicitlyWait(2000);
-                string[] processName = { "QTAgentHandler", "QTAgentApplicationErrorHandler", "UploadFileScriptError" };
-                for (int count = 0; count <= 2; count++)
-                {
-                    // Get array of process name
-                    Process[] localByName = Process.GetProcessesByName(processName[count]);
-                    foreach (Process item in localByName)
-                    {
-                        // kill the process
-                        item.Kill();
-                    }
-                }
-                return true;
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine("Exception in Logout " + exception.Message);
-            }
-            return true;
-        }
+        //        KillAlreadyOpenBrowsers();
+        //        ImplicitlyWait(2000);
+        //        string[] processName = { "QTAgentHandler", "QTAgentApplicationErrorHandler", "UploadFileScriptError" };
+        //        for (int count = 0; count <= 2; count++)
+        //        {
+        //            // Get array of process name
+        //            Process[] localByName = Process.GetProcessesByName(processName[count]);
+        //            foreach (Process item in localByName)
+        //            {
+        //                // kill the process
+        //                item.Kill();
+        //            }
+        //        }
+        //        return true;
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        Console.WriteLine("Exception in Logout " + exception.Message);
+        //    }
+        //    return true;
+        //}
         #endregion
 
        
@@ -1158,26 +1158,26 @@ namespace Automation.Development.Pages
         /// 
         /// </summary>
         /// <returns></returns>
-        public WorkspacePage clickWorkSpaceButton()
-        {
-            LocateControls();
-            IWebElement workspaceButtonControl = this.FindControlByXPath((string) objectRepository.ObjectRepositoryTable["WorkspaceButton"]);
-            workspaceButtonControl.Click();            
-            Actions action = new Actions(this.Browser.Driver);
-            try
-            {
+        //public WorkspacePage clickWorkSpaceButton()
+        //{
+        //    LocateControls();
+        //    IWebElement workspaceButtonControl = this.FindControlByXPath((string) objectRepository.ObjectRepositoryTable["WorkspaceButton"]);
+        //    workspaceButtonControl.Click();            
+        //    Actions action = new Actions(this.Browser.Driver);
+        //    try
+        //    {
 
-                bool isConfigureButtonEnabled = this.WaitForElementToGetEnabled("XPATH", (string)objectRepository.ObjectRepositoryTable["ConfigureButton"]);
-                if (isConfigureButtonEnabled)
-                {
-                    IWebElement configureButtonControl = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["ConfigureButton"]);
-                    action.MoveToElement(configureButtonControl).Click().Perform();                   
+        //        bool isConfigureButtonEnabled = this.WaitForElementToGetEnabled("XPATH", (string)objectRepository.ObjectRepositoryTable["ConfigureButton"]);
+        //        if (isConfigureButtonEnabled)
+        //        {
+        //            IWebElement configureButtonControl = this.FindControlByXPath((string)objectRepository.ObjectRepositoryTable["ConfigureButton"]);
+        //            action.MoveToElement(configureButtonControl).Click().Perform();                   
 
-                }
-            }catch(Exception){}
-            ImplicitlyWait(5000);
-            return new WorkspacePage(this.Browser);
-        }
+        //        }
+        //    }catch(Exception){}
+        //    ImplicitlyWait(5000);
+        //    return new WorkspacePage(this.Browser);
+        //}
     }
 }
 
